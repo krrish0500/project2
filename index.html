@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Happy Birthday Dr. Sisi! 🎂🩺</title>
+  <meta name="description" content="A magical birthday experience crafted just for someone special." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;0,900;1,700&family=Quicksand:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+  <!-- Scroll Progress Bar -->
+  <div class="scroll-progress" id="scroll-progress" aria-hidden="true">
+    <div class="scroll-progress-fill" id="scroll-fill"></div>
+  </div>
+
+  <!-- Confetti Canvas -->
+  <canvas id="confetti-canvas" aria-hidden="true"></canvas>
+
+  <!-- Particle Background -->
+  <div class="particle-bg" id="particle-bg" aria-hidden="true"></div>
+
+  <!-- ============================================================
+       SECTION 1 – HERO (Parallax)
+  ============================================================ -->
+  <section class="section section-hero" id="hero" data-section="1">
+
+    <!-- Parallax layers -->
+    <div class="parallax-layer layer-far"   aria-hidden="true"></div>
+    <div class="parallax-layer layer-mid"   aria-hidden="true"></div>
+    <div class="parallax-layer layer-near"  aria-hidden="true"></div>
+
+    <div class="hero-content">
+      <div class="dr-badge" data-scroll="fade-up" data-delay="0">
+        <span class="dr-badge-icon">🩺</span>
+        <span>Future Doctor · Birthday Star</span>
+      </div>
+
+      <h1 class="hero-title" data-scroll="fade-up" data-delay="100">
+        Happy Birthday,<br /><em>Dr. Sisi!</em>
+      </h1>
+
+      <!-- CSS Cake -->
+      <div class="cake-scene" data-scroll="zoom-in" data-delay="200" aria-label="Birthday cake">
+        <div class="cake">
+          <div class="cake-layer layer-top">
+            <div class="candles-row">
+              <span class="candle"><span class="flame"></span></span>
+              <span class="candle"><span class="flame"></span></span>
+              <span class="candle"><span class="flame"></span></span>
+            </div>
+            <div class="frosting-drip"></div>
+          </div>
+          <div class="cake-layer layer-mid">
+            <div class="frosting-drip"></div>
+          </div>
+          <div class="cake-layer layer-base"></div>
+          <div class="cake-plate"></div>
+        </div>
+      </div>
+
+      <p class="hero-sub" data-scroll="fade-up" data-delay="300">
+        Birthday wishes for the most brilliant future doctor 🩺✨
+      </p>
+
+      <a href="#timeline" class="scroll-cta" id="scroll-cta" data-scroll="fade-up" data-delay="400">
+        <span>Scroll to explore</span>
+        <svg class="chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true">
+          <path d="M6 9l6 6 6-6"/>
+        </svg>
+      </a>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       SECTION 2 – TIMELINE "Reasons I Love You"
+  ============================================================ -->
+  <section class="section section-timeline" id="timeline" data-section="2">
+    <div class="section-inner">
+      <h2 class="section-heading" data-scroll="fade-up">Why You Are Amazing 💖</h2>
+      <p class="section-sub" data-scroll="fade-up" data-delay="100">A few reasons this birthday is extra special</p>
+
+      <div class="timeline">
+
+        <div class="timeline-item" data-scroll="slide-right" data-delay="0">
+          <div class="tl-icon">🌹</div>
+          <div class="tl-card">
+            <span class="tl-number">01</span>
+            <h3>You're Incredible</h3>
+            <p>Every moment spent with you is a treasure. You light up every room you walk into with that radiant smile.</p>
+          </div>
+        </div>
+
+        <div class="timeline-item tl-right" data-scroll="slide-left" data-delay="100">
+          <div class="tl-icon">🩺</div>
+          <div class="tl-card tl-card-doctor">
+            <span class="tl-number">02</span>
+            <h3>Born to Heal</h3>
+            <p>You chose medicine because your heart is big enough to carry everyone else's pain. That's not a doctor — that's a hero.</p>
+          </div>
+        </div>
+
+        <div class="timeline-item" data-scroll="slide-right" data-delay="200">
+          <div class="tl-icon">💊</div>
+          <div class="tl-card tl-card-doctor">
+            <span class="tl-number">03</span>
+            <h3>The Future Dr. Sisi</h3>
+            <p>Every sleepless night of studying, every exam — it's all bringing you closer to the white coat you were always meant to wear.</p>
+          </div>
+        </div>
+
+        <div class="timeline-item" data-scroll="slide-right" data-delay="300">
+          <div class="tl-icon">📚</div>
+          <div class="tl-card tl-card-book">
+            <span class="tl-number">04</span>
+            <h3>The Reader's Heart</h3>
+            <p>Between the pages of every book lies a little bit of Sisi — curious, thoughtful, and endlessly brilliant.</p>
+          </div>
+        </div>
+
+        <div class="timeline-item tl-right" data-scroll="slide-left" data-delay="400">
+          <div class="tl-icon">👑</div>
+          <div class="tl-card">
+            <span class="tl-number">05</span>
+            <h3>You Deserve It All</h3>
+            <p>Today is YOUR day. Celebrate yourself — a brilliant mind, a kind heart, and a future that shines as bright as you.</p>
+          </div>
+        </div>
+
+      </div><!-- /timeline -->
+    </div>
+  </section>
+
+  <!-- ============================================================
+       SECTION 3 – MARQUEE STRIP
+  ============================================================ -->
+  <div class="marquee-wrap" aria-hidden="true">
+    <div class="marquee-track">
+      <span>🎂 Happy Birthday</span>
+      <span>🩺 Future Doctor</span>
+      <span>✨ You're Special</span>
+      <span>💊 Dr. Sisi</span>
+      <span>🌟 Shine Bright</span>
+      <span>🏥 Healing Hearts</span>
+      <span>🎉 Celebrate</span>
+      <span>⚕️ Born to Heal</span>
+      <!-- duplicate for seamless loop -->
+      <span>🎂 Happy Birthday</span>
+      <span>🩺 Future Doctor</span>
+      <span>✨ You're Special</span>
+      <span>💊 Dr. Sisi</span>
+      <span>🌟 Shine Bright</span>
+      <span>🏥 Healing Hearts</span>
+      <span>🎉 Celebrate</span>
+      <span>⚕️ Born to Heal</span>
+    </div>
+  </div>
+
+  <!-- ============================================================
+       SECTION 4 – BIG QUOTE
+  ============================================================ -->
+  <section class="section section-quote" id="quote" data-section="3">
+    <div class="section-inner quote-inner">
+      <div class="quote-marks" data-scroll="fade-up">"</div>
+      <blockquote data-scroll="fade-up" data-delay="100">
+        Sisi, you are not just a year older — you are a year more
+        <em>wonderful</em>, more <em>wise</em>, and more
+        <em>loved</em> than ever before.
+      </blockquote>
+      <p class="quote-credit" data-scroll="fade-up" data-delay="200">— Written just for you, Sisi 🌸</p>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       SECTION – DOCTOR SPECIAL
+  ============================================================ -->
+  <section class="section section-doctor" id="doctor" data-section="3b">
+    <div class="section-inner doctor-inner">
+
+      <div class="doc-badge-big" data-scroll="zoom-in">
+        <span class="doc-cross">⚕️</span>
+      </div>
+
+      <h2 class="section-heading" data-scroll="fade-up" data-delay="100">To the Future Doctor 🩺</h2>
+      <p class="section-sub" data-scroll="fade-up" data-delay="200">
+        A special tribute to someone extraordinary
+      </p>
+
+      <div class="doc-cards" data-scroll="fade-up" data-delay="300">
+        <div class="doc-card">
+          <div class="doc-card-icon">🥼</div>
+          <h3>The White Coat</h3>
+          <p>Soon you'll wear yours with pride. Every stitch tells a story of sacrifice, passion, and brilliance.</p>
+        </div>
+        <div class="doc-card">
+          <div class="doc-card-icon">💉</div>
+          <h3>The Journey</h3>
+          <p>Years of hard work, late nights and dedication — Sisi, your journey to medicine is truly inspiring.</p>
+        </div>
+        <div class="doc-card">
+          <div class="doc-card-icon">❤️‍🩹</div>
+          <h3>The Healer</h3>
+          <p>You already heal everyone around you with your kindness. Imagine what you'll do with a stethoscope!</p>
+        </div>
+      </div>
+
+      <div class="doc-pulse" data-scroll="fade-up" data-delay="400" aria-hidden="true">
+        <svg viewBox="0 0 300 80" class="pulse-svg">
+          <polyline points="0,40 40,40 55,10 70,65 85,20 100,40 140,40 155,5 170,70 185,15 200,40 300,40"
+            fill="none" stroke="url(#pulseGrad)" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+          <defs>
+            <linearGradient id="pulseGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+              <stop offset="0%" stop-color="#ff4d8d"/>
+              <stop offset="100%" stop-color="#c084fc"/>
+            </linearGradient>
+          </defs>
+        </svg>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ============================================================
+       SECTION – SPECIAL MESSAGE BOARD
+  ============================================================ -->
+  <section class="section section-messages" id="messages" data-section="4b">
+    <div class="section-inner">
+
+      <div class="msg-header" data-scroll="fade-up">
+        <span class="msg-icon">📝</span>
+        <h2 class="section-heading">Leave a Birthday Wish 🎉</h2>
+      </div>
+      <p class="section-sub" data-scroll="fade-up" data-delay="100">
+        Write a special message for Sisi — she’ll love reading every single one!
+      </p>
+
+      <div class="msg-form-wrap" data-scroll="zoom-in" data-delay="200">
+        <!-- Floating books decoration -->
+        <div class="book-decor" aria-hidden="true">
+          <span class="bk bk1">📚</span>
+          <span class="bk bk2">📖</span>
+          <span class="bk bk3">📚</span>
+        </div>
+
+        <form class="msg-form" id="msg-form" novalidate>
+          <div class="form-row">
+            <div class="form-group">
+              <label for="sender-name">Your Name</label>
+              <input type="text" id="sender-name" name="name" placeholder="e.g. Ali, Sara..." autocomplete="off" required />
+            </div>
+            <div class="form-group">
+              <label for="sender-relation">You are her...</label>
+              <input type="text" id="sender-relation" name="relation" placeholder="e.g. Best friend, Classmate..." autocomplete="off" />
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="sender-message">Your Birthday Message ✨</label>
+            <textarea id="sender-message" name="message" rows="4"
+              placeholder="Write something lovely for Sisi..." required></textarea>
+          </div>
+          <button type="submit" class="msg-submit-btn" id="msg-submit">
+            <span class="msg-btn-icon">🎀</span>
+            <span>Send My Wish to Sisi</span>
+          </button>
+        </form>
+
+        <!-- Submitted messages wall -->
+        <div class="msg-wall-toolbar" id="msg-wall-toolbar" style="display:none;">
+          <button class="msg-clear-btn" id="msg-clear-btn" title="Delete all messages">
+            🗑️ Clear All Wishes
+          </button>
+        </div>
+        <div class="msg-wall" id="msg-wall" aria-live="polite">
+          <p class="msg-wall-empty" id="msg-wall-empty">📵 Be the first to leave a wish!</p>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ============================================================
+       SECTION 5 – WISH INTERACTIVE
+  ============================================================ -->
+  <section class="section section-wish" id="wish" data-section="4">
+    <div class="section-inner wish-inner">
+      <h2 class="section-heading" data-scroll="fade-up">Close Your Eyes ✨</h2>
+      <p class="section-sub" data-scroll="fade-up" data-delay="100">
+        Blow out the candles and make a wish — the universe is listening.
+      </p>
+      <button class="wish-btn" id="wish-btn" data-scroll="zoom-in" data-delay="200" aria-label="Make a birthday wish">
+        <span class="wish-btn-icon">🕯️</span>
+        <span class="wish-btn-label">Make a Wish</span>
+        <span class="wish-btn-ripple"></span>
+      </button>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       SECTION 6 – FOOTER
+  ============================================================ -->
+  <footer class="section section-footer" id="footer" data-section="5">
+    <div class="footer-glow" aria-hidden="true"></div>
+    <div class="section-inner footer-inner">
+      <p class="footer-label" data-scroll="fade-up">Today & always, Dr. Sisi 🩺💖</p>
+      <h2 class="footer-title" data-scroll="fade-up" data-delay="100">Happy Birthday, Dr. Sisi! 🎂</h2>
+      <p class="footer-love" data-scroll="fade-up" data-delay="200">
+        Made with <span class="heart">❤️</span> just for you
+      </p>
+      <div class="footer-balloons" aria-hidden="true">
+        <span class="fb b1">🎈</span>
+        <span class="fb b2">🎈</span>
+        <span class="fb b3">🎈</span>
+        <span class="fb b4">🎈</span>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Modal -->
+  <div class="modal-overlay" id="modal-overlay" role="dialog" aria-modal="true" aria-labelledby="modal-title" hidden>
+    <div class="modal" id="modal">
+      <button class="modal-close" id="modal-close" aria-label="Close">✕</button>
+      <div class="modal-emoji">🌠</div>
+      <h2 id="modal-title">Sisi's Wish Sent!</h2>
+      <p>The universe heard you, Sisi.<br />Something magical is on its way. 💫</p>
+    </div>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+  <script src="js/script.js"></script>
+</body>
+</html>

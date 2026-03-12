@@ -391,3 +391,5 @@ if (msgForm) {
 
 /* Load messages on startup */
 loadMessages();
+
+

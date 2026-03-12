@@ -237,7 +237,7 @@ document.querySelectorAll('.tl-card').forEach(card => {
    ============================================= */
 const SUPABASE_URL = 'https://osjwikdxzjvauugagboh.supabase.co';
 const SUPABASE_KEY = 'sb_publishable_CAC4m-hsYgrrDzWcLoiZiA_lnI8c416';
-const supabase    = window.supabase.createClient(SUPABASE_URL, SUPABASE_KEY);
+const supabaseClient = window.supabase.createClient(SUPABASE_URL, SUPABASE_KEY);
 
 const msgForm     = document.getElementById('msg-form');
 const msgWall     = document.getElementById('msg-wall');
@@ -255,7 +255,7 @@ function updateToolbar() {
 if (msgClearBtn) {
   msgClearBtn.addEventListener('click', async () => {
     if (!confirm('Saare wishes delete karna chahte ho? 🗑️')) return;
-    const { error } = await supabase.from('wishes').delete().neq('id', 0);
+    const { error } = await supabaseClient.from('wishes').delete().neq('id', 0);
     if (!error) {
       msgWall.querySelectorAll('.msg-bubble').forEach(b => b.remove());
       if (msgEmpty) msgEmpty.style.display = '';
@@ -309,7 +309,7 @@ function formatTime() {
 
 /* Load all messages from Supabase on page load */
 async function loadMessages() {
-  const { data, error } = await supabase
+  const { data, error } = await supabaseClient
     .from('wishes')
     .select('*')
     .order('created_at', { ascending: true });
@@ -324,7 +324,7 @@ async function loadMessages() {
 }
 
 /* Real-time: auto show new messages from any user */
-supabase
+supabaseClient
   .channel('wishes-channel')
   .on('postgres_changes', { event: 'INSERT', schema: 'public', table: 'wishes' },
     (payload) => {
@@ -364,7 +364,7 @@ if (msgForm) {
     btn.innerHTML = '<span>⏳</span><span>Sending...</span>';
     btn.disabled = true;
 
-    const { error } = await supabase
+    const { error } = await supabaseClient
       .from('wishes')
       .insert([{ name, relation, message, time: formatTime() }]);
 
